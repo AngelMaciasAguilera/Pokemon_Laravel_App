@@ -1,0 +1,272 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f7fa;
+        color: #333;
+    }
+    h1 {
+        text-align: center;
+        color: #2d3e50;
+    }
+    /* Top Bar */
+    .top-bar {
+        background-color: #2d3e50;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .top-bar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .top-bar a:hover {
+        color: #0056b3;
+        transition: .3s;
+    }
+
+    
+    /* Button Styles */
+    .buttons-container {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .btn-session {
+        background-color: #007bff;
+        text-decoration: none;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    .btn-session:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilos de la tabla */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #0056b3;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+table td a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+table td a:hover {
+    color: #d32f2f;
+}
+
+/* Botones */
+.add-pokemon {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.add-pokemon:hover {
+    background-color: dodgerblue;
+}
+
+/* Estilo de las filas de la tabla */
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+/*--------------------------------------------------fORMULARIO DE ADICION DE POKEMON-----------------------------------*/
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"],
+input[type="decimal"],
+input[type="number"],
+select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #2d3e50;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+/* Foco en los campos de entrada */
+input[type="text"]:focus,
+input[type="decimal"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Estilo del botón */
+button.submit-btn {
+    width: 90%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.submit-btn:hover {
+    background-color: dodgerblue;
+}
+
+/* Estilo para los campos de texto dentro del formulario */
+input::placeholder,
+select::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+
+
+/* Estilo de las acciones (editar, eliminar) */
+.borrar, .edit {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.borrar:hover, .edit:hover, .view:hover {
+    background-color: lightblue;
+    color: #2d3e50;
+}
+
+.edit{
+    background-color: rgb(25, 139, 25);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.view{
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+/* Formulario y agregar pokemon */
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+/*--------------------------------------------ESTILOS VIEW-----------------------------------*/
+
+.poke-attr{
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poke-attr h1{
+    text-align: left;
+}
+
+
+
+.button-comeback{
+    background-color: #0056b3;
+    color: white;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s;
+}
+
+
+.button-comeback:hover{
+    background-color: dodgerblue;
+}
+
+
+/*--------------------------------------------FOOTER-----------------------------------------*/
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #2d3e50;
+    color: white;
+    height: 100%;
+}
