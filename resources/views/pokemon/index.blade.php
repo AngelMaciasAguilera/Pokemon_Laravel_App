@@ -16,7 +16,7 @@
                 </form>
             @endif
         </div>
-        <table id="tablaProducto">
+        <table id="tablaPokemon">
             <thead>
                 <tr>
                     <th>id</th>

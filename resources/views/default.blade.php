@@ -15,6 +15,18 @@
         </div>
     </div>
 
+    @if(session('message'))
+        <div class="alert-success" role="alert">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    @if($errors->any())
+        <div class="alert-danger" role="alert">
+            {{ $errors->first() }}
+        </div>
+    @endif
+
     <div>
         @yield('content')
     </div>

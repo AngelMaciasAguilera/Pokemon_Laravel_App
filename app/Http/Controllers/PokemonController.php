@@ -14,7 +14,7 @@ class PokemonController extends Controller
     public function index()
     {
         /*
-        Pokemon::orderBy ordena cada pokemon del array que devuelve get por su nombre. Get es un metodo de los handler de Laravel que 
+          Pokemon::orderBy ordena cada pokemon del array que devuelve get por su nombre. Get es un metodo de los handler de Laravel que 
           obtiene los pokemons de la base de datos de manera automatica al llamar al metodo, y te devuelve un array.
         */
         return view('pokemon.index', ['pokemons' => Pokemon::orderBy('id')->get()]);
@@ -48,12 +48,10 @@ class PokemonController extends Controller
 
             /*$object = new Pokemon($request->all());
             $result = $object->save();*/
-            $object = Pokemon::create($request->all());
-            return redirect('pokemon')->with(['message' => 'The pokemon has been added.']);
+            $object = Pokemon::create($request->all());//Crea un nuevo pokemon con los datos del formulario
+            return redirect('pokemon')->with(['message' => 'The pokemon has been added']);
         } catch(\Exception $e) {
-            //si no lo he guardado volver a la página anterior con sus datos para volver a rellenar el formulario y mensaje
-            dd($e);
-            return back()->withInput()->withErrors(['message' => 'The pokemon has not been added.']);
+            return back()->withInput()->withInput()->withErrors(['message' => $e->getMessage()]);
         }
     }
 
@@ -95,9 +93,7 @@ class PokemonController extends Controller
             $result = $pokemon->update($request->all());
             return redirect('pokemon')->with(['message' => 'The pokemon has been updated.']);
         } catch(\Exception $e) {
-            //si no lo he guardado volver a la página anterior con sus datos para volver a rellenar el formulario y mensaje
-            dd($e);
-            return back()->withInput()->withErrors(['message' => 'The pokemon has not been added.']);
+            return back()->withInput()->withInput()->withErrors(['message' => $e->getMessage()]);
         }
     }
 
@@ -110,7 +106,7 @@ class PokemonController extends Controller
             $pokemon->delete();
             return redirect('pokemon')->with(['message' => 'The pokemon has been deleted.']);
         } catch(\Exception $e) {
-             return back()->withErrors(['message' => 'The pokemon has not been deleted.']);
+             return back()->withErrors(['message' => $e->getMessage()]);
         }
     }
 }
